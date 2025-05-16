@@ -1,0 +1,44 @@
+def predict_webcam():
+    # Load trained model and label encoder
+    model = load_model(model_save_path)
+    with open(label_encoder_save_path, 'rb') as le_file:
+        label_encoder = pickle.load(le_file)
+
+    cap = cv2.VideoCapture(0)  # Open webcam
+
+    if not cap.isOpened():
+        print("Error: Could not open webcam.")
+        return
+
+    while True:
+        ret, frame = cap.read()
+        if not ret:
+            print("Failed to capture frame.")
+            break
+
+        # Resize and preprocess the frame
+        resized_frame = cv2.resize(frame, (img_size, img_size))
+        preprocessed_frame = preprocess_input(resized_frame)
+        reshaped_frame = np.expand_dims(preprocessed_frame, axis=0)
+
+        # Predict the gesture
+        predictions = model.predict(reshaped_frame)
+        predicted_class = np.argmax(predictions[0])  # Get index of the highest probability
+        predicted_label = label_encoder[predicted_class]
+
+        # Display prediction on the frame
+        cv2.putText(frame, f"Gesture: {predicted_label}", (10, 50), 
+                    cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+
+        # Display the webcam feed with predicted gesture
+        cv2.imshow('Gesture Recognition', frame)
+
+        # Exit the webcam feed by pressing 'q'
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
+
+    cap.release()
+    cv2.destroyAllWindows()
+
+# Optional: Uncomment the line below to run webcam prediction
+predict_webcam()
