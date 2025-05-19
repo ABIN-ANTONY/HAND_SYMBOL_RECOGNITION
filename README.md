@@ -1,1 +1,10 @@
-# HAND_SYMBOL_RECOGNITION
+
+![Screenshot 2025-05-19 113341](https://github.com/user-attachments/assets/1b738360-a59e-4c3f-8199-a3eba31244ae)
+![Screenshot 2025-05-19 113405](https://github.com/user-attachments/assets/cfcf05fb-a013-473e-9655-59cb56b7151c)
+![Screenshot 2025-05-19 113426](https://github.com/user-attachments/assets/6f2acf47-778a-4e36-a2dd-06700a57104d)
+![Screenshot 2025-05-19 113447](https://github.com/user-attachments/assets/e5dda1af-976f-4fbe-8d21-0040038bc75e)
+![Screenshot 2025-05-19 113513](https://github.com/user-attachments/assets/d261baec-336c-48b6-9f7b-dcc054c3d6a1)
+![Screenshot 2025-05-19 113534](https://github.com/user-attachments/assets/4cb33404-6cbe-4987-b51d-7d85dd901279)
+![Screenshot 2025-05-19 113556](https://github.com/user-attachments/assets/51ee8a72-8126-4650-8db1-81e01bb3eaab)
+![Screenshot 2025-05-19 113616](https://github.com/user-attachments/assets/f245a115-ae49-4084-9825-20b56c396879)
+![Screenshot 2025-05-19 113634](https://github.com/user-attachments/assets/521ca467-bd59-4331-b351-bc466bf3bd95)
